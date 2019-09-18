@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tabletop Game Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site font(s) link -->
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Special+Elite" rel="stylesheet">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- bootstrap CDN link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- bootstrap theme css link -->
+    <link rel="stylesheet" href="./css/theme.css">
+    <!-- custom css link -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
+    <!-- link to the site's logic file -->
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <!-- site navigation bar -->
+    <section id="navigation">
+        <nav class="navbar navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#jumbotron-header">Tabletop Game Tracker</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#jumbotron-header">Start/Print Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-to">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#game-data">View Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#alerts">Things to Note</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign In</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </section>
+    <br>
+    <div class="container">
+        <header>
+
+            <!-- site header/title area -->
+            <section id="jumbotron-header">
+                <div class="jumbotron">
+                    <h1 id="tracker-header" class="display-4">Tabletop Game Tracker</h1>
+                    <p class="lead">Welcome to the Tabletop Game Tracker, this fun little app will help you and your
+                        friends
+                        track your tabletop game sessions by keeping a record of each players choices, and the
+                        resulting dice
+                        rolls.</p>
+                    <hr>
+                    <p>To use this application, click on “START GAME.” The tracker will then begin presenting the
+                        nessacary
+                        prompts for entries. If you wish to print your game data, please select “PRINT.”</p>
+                    <!-- this button starts the application -->
+                    <a class="btn btn-outline-success btn-lg start-button" onclick="tracker();">START GAME <i
+                            class="fas fa-dragon"></i></a>
+                    <!-- this button opens the print dialog -->
+                    <a class="btn btn-outline-secondary btn-lg print-button" onclick="print();">PRINT <i
+                            class="fas fa-print"></i></a>
+                </div>
+            </section>
+            <!-- sites how to section -->
+            <section id="how-to">
+                <h3>How to use this application:</h3>
+                <p>To use this application, click on “START GAME.” The tracker will then begin presenting the nessacary
+                    prompts for entries. If you wish to print your game data, please select “PRINT.”</p>
+            </section>
+            <br>
+            <!-- sites features section -->
+            <section id="features">
+                <h3>Application Features:</h3>
+                <div class="row">
+                    <div class="col">
+                        <div class="card-deck">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Game Tracking</h5>
+                                    <p class="card-text">Tracks player choices and the resulting dice rolls.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Printer Friendly</h5>
+                                    <p class="card-text">If you decide to print off your data, you can rest assured
+                                        that it
+                                        will
+                                        print off in an easy on the eyes format that strives to be easy on your ink
+                                        supply as
+                                        well.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Custom Role Modifiers</h5>
+                                    <p class="card-text">The application contains the “natural” modifier by default,
+                                        but you
+                                        can
+                                        also add custom modifiers to suit your game, edition and overall paly style.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="card-deck">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dice Style Options</h5>
+                                    <p class="card-text">This application contains logic to simulate the rolling of a
+                                        D20 dice.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mobile Responsive</h5>
+                                    <p class="card-text">Use the app on your laptop, tablet or phone this application
+                                        was
+                                        designed
+                                        with mobile in mind.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">User Accounts</h5>
+                                    <p class="card-text">Can't or don't want to print off your data? Thats fine, simply
+                                        create or log in to your account to save your data and view past games.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+        </header>
+        <!-- main section of site starts here -->
+        <main>
+            <br>
+            <section id="game-data">
+                <!-- Game record goes here -->
+                <p id="turns">Game data will show up here</p>
+            </section>
+        </main>
+        <footer>
+            <!-- sites alerts/things to note section -->
+            <section id="alerts">
+                <br>
+                <h3>Things to note:</h3>
+                <div class="alert alert-warning" role="alert">
+                    At this time this application only rolls a D20
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    If you accidentally exit the game prompts, you may have to start a new instance of the application
+                    by
+                    clicking “START GAME.” Strongly consider printing out your current data before stating a new game
+                    to help keep track of your session. We hope to be able to avoid this issue in the future.
+                </div>
+                <div class="alert alert warning" role="alert">
+                    At this time the user accounts feature is unavailable, please print your data if you need to save
+                    it until the accounts feature is available. Thank you.
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    If you run into any issues while using the application, please proceed to <a href="#">"git repo
+                        link"</a> and leave
+                    a comment clearly describing the problem. Please also include any error codes you may have
+                    received.
+
+                </div>
+
+            </section>
+        </footer>
+    </div>
+    <!-- copyright section -->
+    <section id="copyright">
+        <em>Copyright &copy; 2019 Brandon Williams</em>
+    </section>
+    <!-- !!!DO NOT DELETE these scripts are required for bootstrap to run properly. DO NOT DELETE!!! -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

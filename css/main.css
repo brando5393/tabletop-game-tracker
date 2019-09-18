@@ -1,0 +1,90 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merienda', cursive;
+}
+
+p {
+    font-family: 'Special Elite', cursive;
+}
+
+body {
+    background-image: url("http://www.renegadetribune.com/wp-content/uploads/2018/04/dungeons-and-dragons-master-book-2-wallpaper-001.jpg");
+    /* Please see image attributions file for image source */
+    background-color: #D2E8DB;
+    /* Change background color to gradient */
+}
+
+nav {
+    font-family: 'Special Elite', cursive;
+}
+
+.alert {
+    background-color: #795D36;
+    font-weight: bold;
+}
+
+.card {
+    background-color: #537828;
+    color: white;
+}
+
+#copyright {
+    background-color: #537828;
+    color: white;
+    text-align: center;
+}
+
+
+
+.lead {
+    font-family: 'Special Elite', cursive;
+    color: white;
+}
+
+.jumbotron {
+    background-color: #795D36;
+    color: white;
+}
+
+#how-to,
+#features,
+#alerts {
+    color: white;
+}
+
+#game-data {
+    background-image: linear-gradient(#E3A349, #FFE79D, #E3A349);
+}
+
+
+@media only print {
+    body {
+        background-color: white;
+        color: black;
+        background-image: none;
+    }
+
+    #tracker-header {
+        visibility: visible;
+        display: block;
+    }
+
+    #jumbotron-header,
+    #how-to,
+    #features,
+    #alerts {
+        display: none;
+    }
+
+
+    @page {
+        size: 8.5in 11in;
+        margin: auto;
+        size: portrait;
+    }
+
+}
