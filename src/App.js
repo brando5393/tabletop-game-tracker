@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/pages/Home";
+import Tracker from "./components/pages/Tracker";
+import Help from "./components/pages/Help";
+import Login from "./components/pages/Login";
+import Register from "./components/pages/Register";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Container from "react-bootstrap/Container";
+import Navbar from "./components/Navbar/Navbar";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="appBody">
+      <Router>
+        <Navbar />
+        <Container className="mainContainer">
+          <Switch>
+            <Route exact path="/" component={Home} />
+          </Switch>
+          <Switch>
+            <Route exact path="/tracker" component={Tracker} />
+          </Switch>
+          <Switch>
+            <Route exact path="/help" component={Help} />
+          </Switch>
+          <Switch>
+            <Route exact path="/login" component={Login} />
+          </Switch>
+          <Switch>
+            <Route exact path="/register" component={Register} />
+          </Switch>
+        </Container>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
