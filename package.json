@@ -2,11 +2,14 @@
   "name": "tabletop-game-tracker",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.2.2",
+    "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
+    "concurrently": "^5.3.0",
     "express": "^4.17.1",
     "firebase": "^8.1.1",
     "react": "^17.0.1",
@@ -21,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch": "nodemon server.js",
+    "dev": "concurrently \"npm run watch\" \"cd client && npm start \""
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
