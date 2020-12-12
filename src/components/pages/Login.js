@@ -1,10 +1,14 @@
 import React from "react";
-import JumboHeading from "../../components/JumboHeading/JumboHeading";
+import FormHeading from "../FormHeading/FormHeading.js";
 
 const Login = (props) => {
   return (
     <div>
-      <JumboHeading mainText="Login" subText="Welcome back" />
+      <FormHeading
+        mainText="Login"
+        subText="Welcome back"
+        image="https://www.flaticon.com/svg/static/icons/svg/2996/2996170.svg"
+      />
       <form method="POST" action="/login">
         <label for="emailInput" className="form-label">
           E-mail:

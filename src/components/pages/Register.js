@@ -1,12 +1,13 @@
 import React from "react";
-import JumboHeading from "../../components/JumboHeading/JumboHeading";
+import FormHeading from "../FormHeading/FormHeading.js";
 
 const Register = (props) => {
   return (
     <div>
-      <JumboHeading
+      <FormHeading
         mainText="Register"
         subText="Create an account to save your games and so much more."
+        image="https://www.flaticon.com/svg/static/icons/svg/3893/3893041.svg"
       />
       <form method="POST" action="/register">
         <label for="firstNameInput" className="form-label">

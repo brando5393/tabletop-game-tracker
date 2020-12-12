@@ -1,3 +1,28 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1518534249708-e8f3537753ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merienda", cursive;
+  color: #ffff;
+}
+
+p {
+  font-family: "Special Elite", cursive;
+  color: #ffff;
+}
+
+nav {
+  font-family: "Special Elite", cursive;
+}
+
 label {
   font-weight: bold;
 }
@@ -5,8 +30,34 @@ label {
 form span {
   margin-bottom: 10px;
 }
+
+.card {
+  background-color: #537828;
+  margin-bottom: 10px;
+}
+
+img.card-img-top {
+  margin-top: 5px;
+  height: 120px;
+  width: auto;
+}
+
+div.card-title {
+  font-family: "Merienda", cursive;
+  color: #ffff;
+}
+
 .navbar {
   margin-bottom: 10px;
+  background-color: #02b875 !important;
+}
+
+.nav-link {
+  color: whitesmoke !important;
+}
+
+.nav-link:hover {
+  color: royalblue !important;
 }
 
 .mainContainer {
@@ -16,4 +67,11 @@ form span {
 
 .jumboHeading {
   text-align: center;
+  background-color: #795d36;
+}
+
+.form-heading-img {
+  height: 120px;
+  width: auto;
+  margin-bottom: 5px;
 }
