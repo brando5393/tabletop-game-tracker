@@ -14,19 +14,9 @@ app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "./public/index.html"))
 );
 
-// app.post("/register", (req, res) => {
-//   auth
-//     .createUserWithEmailAndPassword(req.body.emailInput, req.body.passwordInput)
-//     .then((err, result) => {
-//       if (err) {
-//         console.error(err);
-//       } else {
-//         // res.redirect("/");
-//         console.log(result);
-//         res.send("User Created Successfully");
-//       }
-//     });
-// });
+app.post("/register", (req, res) => {
+  res.send("Register route hit");
+});
 
 app.listen(PORT, (err) =>
   err ? console.log(err) : console.log(`Server listening on port ${PORT}`)
