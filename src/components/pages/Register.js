@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import FormHeading from "../FormHeading/FormHeading.js";
 
-const Register = (props) => {
+const Register = () => {
   const [accountInfo, setAccountInfo] = useState({
     firstName: "",
     lastName: "",
@@ -11,15 +11,20 @@ const Register = (props) => {
   });
 
   const handleChange = (e) => {
-    const name = e.target.name;
+    const value = e.target.value;
     setAccountInfo({
-      [name]: e.target.value,
+      ...accountInfo,
+      [e.target.name]: value,
     });
-    console.log(e.target.value);
+    // console.log(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios
+      .post("/register", accountInfo)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
     console.log(accountInfo);
   };
 
@@ -31,102 +36,73 @@ const Register = (props) => {
         image="https://www.flaticon.com/svg/static/icons/svg/3893/3893041.svg"
       />
       <form method="POST" onSubmit={handleSubmit}>
-        <label for="firstNameInput" className="form-label">
+        <label htmlFor="firstName" className="form-label">
           First Name:
         </label>
         <input
           type="text"
-          id="firstNameInput"
-          name="firstNameInput"
+          id="firstName"
+          name="firstName"
           className="form-control"
           placeholder="John"
-          aria-describedby="firstNameInputHelp"
+          aria-describedby="firstNameHelp"
           value={accountInfo.firstName}
           onChange={handleChange}
           required
         />
-        <span id="firstNameInputHelp" class="form-text">
+        <span id="firstNameHelp" className="form-text">
           Please enter your fist name.
         </span>
-        <label for="lastNameInput" className="form-label">
+        <label htmlFor="lastName" className="form-label">
           Last Name:
         </label>
         <input
           type="text"
-          id="lastNameInput"
-          name="lastNameInput"
+          id="lastName"
+          name="lastName"
           className="form-control"
           placeholder="Doe"
-          aria-describedby="lastNameInputHelp"
+          aria-describedby="lastNameHelp"
           value={accountInfo.lastName}
           onChange={handleChange}
           required
         />
-        <span id="lastNameInputHelp" class="form-text">
+        <span id="lastNameHelp" className="form-text">
           Please enter your last name.
         </span>
-        <label for="emailInput" className="form-label">
+        <label htmlFor="email" className="form-label">
           E-mail:
         </label>
         <input
           type="email"
-          id="emailInput"
-          name="emailInput"
+          id="email"
+          name="email"
           className="form-control"
           placeholder="Jdoe1123@gmail.com"
-          aria-describedby="emailInputHelp"
+          aria-describedby="emailHelp"
           value={accountInfo.email}
           onChange={handleChange}
           required
         />
-        <span id="emailInputHelp" class="form-text">
+        <span id="emailHelp" className="form-text">
           Please enter your E-mail address.
         </span>
-        <label for="confirmEmailInput" className="form-label">
-          Confirm E-mail:
-        </label>
-        <input
-          type="email"
-          id="confirmEmailInput"
-          name="confirmEmailInput"
-          className="form-control"
-          aria-describedby="confirmEmailHelp"
-          required
-        />
-        <span id="confirmEmailHelp" class="form-text">
-          Please confirm your E-mail address.
-        </span>
-        <label for="passwordInput" className="form-label">
+        <label htmlFor="password" className="form-label">
           Password:
         </label>
         <input
           type="text"
-          id="passwordInput"
-          name="passwordInput"
+          id="password"
+          name="password"
           className="form-control"
-          aria-describedby="passwordInputHelp"
+          aria-describedby="passwordHelp"
           value={accountInfo.password}
           onChange={handleChange}
           required
         />
-        <span id="passwordInputHelp" class="form-text">
+        <span id="passwordHelp" className="form-text">
           Please enter a password.
         </span>
-        <label for="confirmPasswordInput" className="form-label">
-          Confirm Password:
-        </label>
-        <input
-          type="text"
-          id="confirmPasswordInput"
-          name="confirmPasswordInput"
-          className="form-control"
-          aria-describedby="confirmPasswordInputHelp"
-          required
-        />
-        <span id="confirmPasswordInputHelp" class="form-text">
-          Please confirm your password.
-        </span>
-
         <button
           onClick={handleSubmit}
           id="registerSubmit"

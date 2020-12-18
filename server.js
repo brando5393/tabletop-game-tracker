@@ -15,7 +15,7 @@ app.get("/", (req, res) =>
 );
 
 app.post("/register", (req, res) => {
-  res.send("Register route hit");
+  console.log(req.body);
 });
 
 app.listen(PORT, (err) =>

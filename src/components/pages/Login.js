@@ -10,7 +10,7 @@ const Login = (props) => {
         image="https://www.flaticon.com/svg/static/icons/svg/2996/2996170.svg"
       />
       <form method="POST" action="/login">
-        <label for="emailInput" className="form-label">
+        <label htmlFor="emailInput" className="form-label">
           E-mail:
         </label>
         <input
@@ -22,10 +22,10 @@ const Login = (props) => {
           aria-describedby="emailInputHelp"
           required
         />
-        <span id="emailInputHelp" class="form-text">
+        <span id="emailInputHelp" className="form-text">
           Please enter your e-mail.
         </span>
-        <label for="passwordInput" className="form-label">
+        <label htmlFor="passwordInput" className="form-label">
           Password:
         </label>
         <input
@@ -36,7 +36,7 @@ const Login = (props) => {
           aria-describedby="passwordInputHelp"
           required
         />
-        <span id="passwordInputHelp" class="form-text">
+        <span id="passwordInputHelp" className="form-text">
           Please enter your password.
         </span>
         <button type="submit" id="loginSubmit" className="btn btn-success">
