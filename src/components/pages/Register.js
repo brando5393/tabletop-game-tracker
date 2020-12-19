@@ -16,14 +16,16 @@ const Register = () => {
       ...accountInfo,
       [e.target.name]: value,
     });
-    // console.log(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post("/register", accountInfo)
-      .then((res) => console.log(res))
+      .then((req, res) => {
+        console.log(req.body);
+        console.log(res);
+      })
       .catch((err) => console.log(err));
     console.log(accountInfo);
   };
